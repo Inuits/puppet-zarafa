@@ -1,6 +1,7 @@
 import 'packages.pp'
 import 'config.pp'
 import 'services.pp'
+import 'define.pp'
 
 class zarafa {
 	include 'zarafa::packages'
