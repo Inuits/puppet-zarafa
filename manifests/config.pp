@@ -64,5 +64,12 @@ class zarafa::config {
 			mode => 0640,
 			content => template('zarafa/unix.cfg.erb');
 
+		'webaccess config':
+			ensure => present,
+			path => '/etc/zarafa/webaccess/config.php',
+			owner => root,
+			group => root,
+			mode => 0644,
+			content => template('zarafa/webaccess.erb');
 	}
 }

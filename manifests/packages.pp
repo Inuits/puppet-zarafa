@@ -5,6 +5,9 @@ class zarafa::packages {
 			name => $operatingsystem ? {
 				'Centos' => 'zarafa',
 				'Debian' => 'zarafa-meta',
-			},
+			};
+
+		'zarafa-webaccess':
+			ensure => present;
 	}
 }
