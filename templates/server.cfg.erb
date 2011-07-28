@@ -108,7 +108,7 @@ mysql_port		= 3306
 mysql_user		= root
 
 # The password for the user (leave empty for no password)
-mysql_password		= <%= mysql_rootpass %>
+mysql_password		= <%= 'mysql::rootpass' %>
 
 # Override the default MySQL socket to access mysql locally
 # Works only if the mysql_host value is empty or 'localhost'
