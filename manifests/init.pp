@@ -3,7 +3,10 @@ import 'config.pp'
 import 'services.pp'
 import 'define.pp'
 
-class zarafa {
+class zarafa (
+	$user = 'zarafa',
+	$mta = 'zarafa: zarafa_destination_recipient_limit=1'
+) {
 	include 'zarafa::packages'
 	include 'zarafa::config'
 	include 'zarafa::services'
