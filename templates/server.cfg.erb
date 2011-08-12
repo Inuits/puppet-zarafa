@@ -105,17 +105,17 @@ mysql_host		= localhost
 mysql_port		= 3306
 
 # The user under which we connect with MySQL
-mysql_user		= root
+mysql_user		= <%= db_user %>
 
 # The password for the user (leave empty for no password)
-mysql_password		= <%= 'mysql::rootpass' %>
+mysql_password		= <%= db_pass %>
 
 # Override the default MySQL socket to access mysql locally
 # Works only if the mysql_host value is empty or 'localhost'
 mysql_socket		=
 
 # Database to connect to
-mysql_database		= zarafa
+mysql_database		= <%= db %>
 
 # Where to place attachments. Value can be 'database' or 'files'
 attachment_storage	= database
@@ -275,7 +275,7 @@ companyquota_warn      = 0
 # Name of the plugin that handles users
 # Required, default = ldap
 # Values: ldap, unix, db, ldapms (available in enterprise license)
-user_plugin		= db
+user_plugin		= <%= user_store %>
 
 # configuration file of the user plugin, examples can be found in /usr/share/zarafa/example-config
 user_plugin_config	= /etc/zarafa/ldap.cfg
