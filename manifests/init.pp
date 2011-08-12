@@ -5,6 +5,10 @@ import 'define.pp'
 
 class zarafa (
 	$user = 'zarafa',
+	$db = 'zarafa',
+	$db_user = 'zarafa',
+	$db_pass = 'zarafa',
+	$user_store = 'db',
 	$mta = 'zarafa: zarafa_destination_recipient_limit=1'
 ) {
 	include 'zarafa::packages'
