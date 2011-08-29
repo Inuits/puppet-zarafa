@@ -2,6 +2,9 @@ import 'packages.pp'
 import 'config.pp'
 import 'services.pp'
 import 'define.pp'
+import 'user.pp'
+import 'repo.pp'
+import 'dbconf.pp'
 
 class zarafa (
 	$user = 'zarafa',
